@@ -13,7 +13,7 @@ $files = array_diff(scandir($dir),array('..', '.'));
 
 foreach($files as $file){
         $filepath = $dir."/".$file;
-        echo readfile($filepath);
+        readfile($filepath);
         echo  nl2br ("\n");
 }
 echo  nl2br ("\n");
