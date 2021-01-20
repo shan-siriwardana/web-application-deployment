@@ -2,7 +2,6 @@ pipeline{
   agent any
   
   parameters {
-    string(description: 'DTE release version', name: 'DTE_RELEASE_VERSION')
     choice(choices: ['provision', 'destroy'], description: 'Select Action', name: 'action')
   }
   
