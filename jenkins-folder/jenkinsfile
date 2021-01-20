@@ -10,6 +10,7 @@ pipeline{
   
   environment{
     action="${action}"
+  }
 
   stages {
   
