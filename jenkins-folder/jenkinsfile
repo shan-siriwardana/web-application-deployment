@@ -1,5 +1,30 @@
 pipeline{
+  agent {
+    any
+  }
+  
+  parameters {
+    string(description: 'DTE release version', name: 'DTE_RELEASE_VERSION')
+    choice(choices: ['provision', 'destroy'], description: 'Select Action', name: 'action')
+  }
+  
+  environment{
+    action="${action}"
 
-
-
+  stages {
+  
+    stage('Call Terraform') {
+      steps {
+        println "action: ${action} infrastructure"
+      }
+    }
+    
+  }
+  
+  post { 
+    always { 
+      println "cleanWs"
+      //cleanWs()      
+    }
+  }
 }
