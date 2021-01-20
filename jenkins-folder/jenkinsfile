@@ -1,7 +1,5 @@
 pipeline{
-  agent {
-    any
-  }
+  agent any
   
   parameters {
     string(description: 'DTE release version', name: 'DTE_RELEASE_VERSION')
