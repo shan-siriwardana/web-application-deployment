@@ -18,7 +18,7 @@ pipeline{
 
         script{
             if("${action}" == "provision"){
-                sh 'cd "${WORKSPACE}"/terraform; terraform apply -auto-approve'
+                sh 'cd "${WORKSPACE}"/terraform; terraform init; terraform apply -auto-approve'
             }else{
                 sh 'cd "${WORKSPACE}"/terraform; terraform destroy -auto-approve'
             }
