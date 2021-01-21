@@ -2,6 +2,7 @@
 
 provider "aws" {
   profile = "default"
+  shared_credentials_file = "/var/credentials"
   region  = "ap-southeast-1"
 }
 
