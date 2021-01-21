@@ -15,6 +15,12 @@ pipeline{
       steps {
         println "action: ${action} infrastructure"
         println "workspace: ${WORKSPACE}"
+
+        if("${action}" == "provision"){
+            sh 'cd "${WORKSPACE}"/terraform; terraform apply -auto-approve'
+        }else{
+            sh 'cd "${WORKSPACE}"/terraform; terraform destroy -auto-approve'
+        }
       }
     }
     
