@@ -1,9 +1,8 @@
-#substitute for placehosders access_key_id and secret_access_key before running the script.
-
+#substitute values for placehosders access_key_id and secret_access_key, before running the script.
 
 import boto3
-s3 = boto3.client('s3')
 
+s3 = boto3.client('s3')
 s3 = boto3.client(
    's3',
    aws_access_key_id='<access_key_id>',
